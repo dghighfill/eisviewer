@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="../css/eis.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				Enterprise Integration Server Event Subscriber
+			</div>
+			<div class="menuBar">
+				<div class="icon">
+					EIS
+					<br>
+					EVENT
+					<br>
+					VIEWER
+				</div>
+				<div class="menu">
+					<div class="addSubscription">
+						Add Subscription
+					</div>
+					<div class="tabRow">
+						<div class="tab">
+							tab1
+						</div>
+						<div class="tab">
+							tab2
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="left-panel">
+					<label for="platform">Platform:</label>
+					<select id="platform">
+						<option value="dev">Development</option>
+						<option value="int">Integration</option>
+						<option value="cla">Client Acceptance</option>
+						<option value="prod">Production</option>
+					</select>
+					<br>
+					<label for="url">URL:</label>
+					<input type="input" id="url" size="30" value="eis/smartdesk/opr/MFL/dst/v1"/>
+					<br>
+					<label for="criteria">Criteria:</label>
+					<br>
+					<textarea rows="14" id="criteria" >
+<event> 
+    <header>
+        <eventType></eventType>
+        <eventName></eventName>
+        <eventSource></eventSource>
+    </header>
+</event>
+            </textarea>
+					<br>
+					<div id="buttonRow" align="right">
+						<label>
+							<input type="checkbox" id="keepAlive"value="keepAlive"/>
+							Keep Alive</label>
+						<input type="button" value="Subscribe"/>
+					</div>
+				</div>
+				<div class="right-panel">
+					<div class="responseHeader">
+						Response
+					</div>
+					<div class="response">
+						line1
+						<br>
+						line2
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				Brought to you by<br>DALE HIGHFILL
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+		<script src="../js/eis.js"></script>
 		<link rel="stylesheet" href="../css/eis.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
 	</head>
-	<body>
+	<body ng-controller="EisController" ng-init="init()">
 		<div class="container">
 			<div class="header">
 				Enterprise Integration Server Event Subscriber
@@ -61,7 +63,7 @@
 						<label>
 							<input type="checkbox" id="keepAlive"value="keepAlive"/>
 							Keep Alive</label>
-						<input type="button" value="Subscribe"/>
+						<input id="submitButton" type="button" value="Subscribe"/>
 					</div>
 				</div>
 				<div class="right-panel">

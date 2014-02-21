@@ -1,0 +1,123 @@
+@CHARSET "ISO-8859-1";
+body {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+.container {
+	width: 80%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.header {
+	background-color: #996633;
+	font-size: 16px;
+	text-align: center;
+	color: white;
+	padding: 5px;
+}
+.menuBar {
+	background-color: #0099CC;//
+	height: 50px;
+	color: white;
+}
+.icon {
+	width: 100px;//
+	height: 70px;
+	background-color: #0099CC;
+	padding: 35px 0 2px 5px;
+	float: left;
+	font-weight: bold;
+	line-height: 90%;
+}
+.menu {
+}
+.addSubscription {
+	background-color: #93BCE6;
+	border-right-style: solid;
+	border-right-color: white;
+	border-right-width: thin;
+	width: 250px;
+	height: 35px;
+	text-align: center;
+	padding-top: 15px;
+	vertical-align: middle;
+}
+.tabRow {
+	padding: 5px;
+	height: 19px;
+	background-color: white;
+	color: #0099FF;
+	text-align: center;
+}
+.content {
+	height: 320px;
+	background-color: #F5F5F5;
+	clear: both;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+.footer {
+	clear: both;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 10px;
+	background-color: #996633;
+}
+.tab {
+	float: left;
+	border-right-style: solid;
+	border-right-color: #0099FF;
+	border-right-width: thin;
+	padding-right: 10px;
+	padding-left: 10px;
+	width: 55px;
+}
+#graph {
+	align: center;
+	width: 55px;
+	height: 5px;
+	// background: -webkit-linear-gradient(left, green , red); /* For Safari 5.1 to 6.0 */
+	// background: -o-linear-gradient(right, green , red); /* For Opera 11.1 to 12.0 */
+	// background: -moz-linear-gradient(right, green , red); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, green,green,green,green,green,green,green,green,green, red,red); /* Standard syntax */
+}
+.left-panel {
+	color: black;
+	float: left;
+	width: 280px;
+	height: 100%;
+	padding-left: 5px;
+	padding-top: 10px;
+	margin-right: 5px;//
+	background-color: #AAF5F5;
+	border-right-style: solid;
+	border-right-color: #000000;
+	border-right-width: thin;
+}
+.right-panel {//
+	background-color: #0099FF;
+	height: 100%;
+}
+.responseHeader {
+	padding: 5px;
+}
+
+.response {
+	margin: 0 5px 5px 290px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: thin;
+	background-color: #FFFFFF;
+	height: auto;
+}
+#txtCriteria {
+	width: 261px;
+	font-size: 10px;
+}
+#buttonRow {
+	padding-right: 10px;
+}
+
+#url {
+	margin-left: 23px;
+}

@@ -24,7 +24,10 @@
 					</div>
 					<div class="tabRow">
 						<div class="tab">
-							tab1
+							<div>
+								tab1 
+							</div>
+							<div id="graph"></div>
 						</div>
 						<div class="tab">
 							tab2
@@ -46,14 +49,15 @@
 					<input type="input" id="url" size="30" value="eis/smartdesk/opr/MFL/dst/v1"/>
 					<br>
 					<label for="criteria">Criteria:</label>
+					<a href ng-click="loadTemplate()">load template</a>
 					<br>
-					<textarea rows="14" id="txtCriteria">{{templateCriteria}}</textarea>
+					<textarea rows="14" id="txtCriteria" ng-model="criteria"></textarea>
 					<br>
 					<div id="buttonRow" align="right">
 						<label>
 							<input type="checkbox" id="keepAlive"value="keepAlive"/>
 							Keep Alive</label>
-						<input id="submitButton" type="button" value="Subscribe"/>
+						<input id="submitButton" ng-click="start()" type="button" value="Subscribe"/>
 					</div>
 				</div>
 				<div class="right-panel">
@@ -65,13 +69,17 @@
 						<br>
 						line2
 					</div>
+					<div ng-app="timer" ng-controller="TimerController"align="right" ng-model="timer">
+						Time since last event: {{timer}}
+					</div>
 				</div>
 			</div>
 			<div class="footer">
 				Brought to you by<br>DALE HIGHFILL
 			</div>
 		</div>
-	<script src="app/lib/angular.js"></script>
+	<script src="app/lib/angular/angular.js"></script>
 	<script src="app/js/eis.js"></script>
+	<script src="app/js/timer.js"></script>
 	</body>
 </html>

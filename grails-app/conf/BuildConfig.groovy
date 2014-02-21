@@ -31,6 +31,9 @@ grails.project.dependency.resolution = {
     log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
     legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
+	
+	// 2014-02-20 - Added this for the xalan:serializer:jar:2.7.1 issue
+	cacheDir "C:/Users/dt19643/.m2/repository"
 
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
@@ -44,12 +47,16 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
+        //2014-02-20 - Added this 
+		mavenRepo "http://artifacts-scm.dstcorp.net/artifactory/repo"
     }
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         // runtime 'mysql:mysql-connector-java:5.1.27'
         // runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
+		build 'org.codehaus.groovy.modules.http-builder:http-builder:0.6'
+		build 'commons-beanutils:commons-beanutils:1.8.0'
     }
 
     plugins {
@@ -59,6 +66,7 @@ grails.project.dependency.resolution = {
         // plugins for the compile step
         compile ":scaffolding:2.0.1"
         compile ':cache:1.1.1'
+		compile ":rest:0.8"
 
         // plugins needed at runtime but not for compilation
         runtime ":hibernate:3.6.10.7" // or ":hibernate4:4.1.11.6"
